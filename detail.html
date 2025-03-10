@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca81e83595.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="https://e7.pngegg.com/pngimages/130/1021/png-clipart-movie-logo-movie-logo-film-tape.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/localStorage.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/detail.js" defer></script>
+    <title>MyMovie - Movie Details</title>
+</head>
+<body>
+    <header>
+     
+      <a href="index.html">  <i class="fa-solid fa-arrow-left"></i></a>
+
+        <h1>MyMovie</h1>
+        <div class="toggle__container">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <div class="ball"></div>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div class="movie-backdrop">
+            <div class="play-button">
+                <i class="fa-solid fa-play"></i>
+                
+            </div>
+        </div>
+        <section class="movie-details"> 
+            <h2 class="movie-title"></h2>
+            <div class="movie-rating">
+                <i class="fa-solid fa-star"></i>
+                <span></span>
+            </div>
+            <div class="movie-genres"></div>
+            <div class="movie-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Length</span>
+                    <span class="meta-value" id="movie-length"></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Language</span>
+                    <span class="meta-value" id="movie-language"></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Rating</span>
+                    <span class="meta-value" id="movie-rating"></span>
+                </div>
+            </div>
+            <div class="movie-description">
+                <h3>Description</h3>
+                <p id="movie-overview"></p>
+            </div>
+            <div class="movie-cast">
+                <h3>Cast</h3>
+                <div class="cast-list" id="cast-list"></div>
+                <a href="#" class="see-more">See More</a>
+            </div>
+        </section>
+        <div class="trailer-container" id="trailer-container">
+            <iframe id="trailer-player" frameborder="0" allowfullscreen autoplay></iframe>
+            <button class="close-button">×</button>
+        </div>
+    </main>
+</body>
+</html>
