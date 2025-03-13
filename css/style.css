@@ -1,0 +1,141 @@
+@import url(darkmode.css);
+@import url(burger.css);
+@import url(home.css);
+@import url(global.css);
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+    --dark-color: hsl(0, 0%, 10%);
+    --light-color: hsl(0, 0%, 97%);
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-blue: #DBE3FF;
+    --deep-blue: #110E47;
+    --gray: #9C9C9C;
+    --light-blue-2: #88A4E8;
+    --light-lavender: #F0EFFA;
+    --light-gray: #D8D8D8;
+    --muted-green: #AAA981;
+    --light-gray-2: #E5E4EA;
+    --light-purple: #BCBCCD;
+    --light-periwinkle: #D6D6FD;
+    --star-rating: #FFC319;
+    --base-font: 'Merriweather', serif;
+    --secondary-font: 'Mulish', serif;
+    --background-color: var(--white);
+    --text-color: var(--black);
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  main {
+    padding: 2rem 1rem;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  
+    transition: color 0.3s;
+  }
+  
+ 
+  
+  @media screen and (max-width: 375px) {
+    header {
+      padding: 0.5rem;
+    }
+  
+    main {
+      padding: 1rem 0.5rem;
+    }
+  
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+/* :root[data-dark="true"] {
+    --background-color: var(--dark-color);
+    --text-color: var(--light-color);
+    --button-border: #4A4A4A;
+}
+
+html[data-dark="true"],
+html[data-dark="true"] body,
+html[data-dark="true"] header,
+html[data-dark="true"] section,
+html[data-dark="true"] main {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+html[data-dark="true"] .label {
+    background-color: #FFFFFF;
+}
+
+html[data-dark="true"] .label .ball {
+    background-color: #000000;
+}
+
+html[data-dark="true"] button {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--button-border);
+}
+
+html[data-dark="true"] button:hover {
+    color: var(--background-color);
+    border-color: var(--text-color);
+    background-color: var(--text-color);
+}
+
+html[data-dark="true"] .horizontal-scroll {
+    scrollbar-color: var(--gray) var(--background-color);
+}
+
+html[data-dark="true"] .horizontal-scroll::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+html[data-dark="true"] .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: var(--gray);
+}
+
+html[data-dark="true"] .movie-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+}
+
+html[data-dark="true"] .movie-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-dark="true"] .movie-card img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+html[data-dark="true"] .movie-card p {
+    color: var(--text-color);
+}
+
+html[data-dark="true"] .wrapper-menu {
+    background-color: transparent;
+}
+
+html[data-dark="true"] .line-menu {
+    background-color: var(--text-color);
+} */

@@ -1,0 +1,177 @@
+/* Dark Mode Styles */
+:root[data-dark="true"] {
+    --background-color: var(--dark-color);
+    --text-color: var(--light-color);
+    --button-border: #4A4A4A;
+}
+
+html[data-dark="true"],
+html[data-dark="true"] body,
+html[data-dark="true"] header,
+html[data-dark="true"] section,
+html[data-dark="true"] .wrapper-menu,
+html[data-dark="true"] .line-menu ,
+.arrow,
+footer{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+html[data-dark="true"] .arrow:hover {
+    animation:borderAni 5s cubic-bezier(0, 0.6, 1, 0.4); 
+    border:solid 2px var(--dark-color); 
+  border-radius:50%;
+}
+html[data-dark="false"] .arrow:hover {
+    animation:borderAni 5s cubic-bezier(0, 0.6, 1, 0.4); 
+    border:solid 2px var(--light-color); 
+  border-radius:50%;
+}
+
+
+/* heading dark mode */
+
+html[data-dark="true"] h1,
+html[data-dark="true"]section h2,
+html[data-dark="true"] .movie-cast h3,
+html[data-dark="true"] .movie-description h3
+
+{
+    color: var(--light-color);
+}
+html[data-dark="false"] h1,
+html[data-dark="false"] section h2,
+html[data-dark="false"] .movie-cast h3,
+html[data-dark="false"] .movie-description h3
+{
+    color: var(--deep-blue);
+}
+
+
+
+
+html[data-dark="true"] .wrapper-menu {
+    background-color: transparent; 
+}
+
+html[data-dark="true"] .line-menu {
+    background-color: var(--text-color); 
+}
+
+html[data-dark="true"] .label {
+    background-color: var( --light-color); 
+}
+
+html[data-dark="true"] .label .ball {
+    background-color: var(--dark-color); 
+}
+
+html[data-dark="true"] button {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--button-border);
+}
+
+html[data-dark="true"] button:hover {
+    color: var(--background-color);
+    border-color: var(--text-color);
+    background-color: var(--text-color);
+}
+
+html[data-dark="true"] .horizontal-scroll {
+    scrollbar-color: var(--gray) var(--background-color);
+}
+
+html[data-dark="true"] .horizontal-scroll::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+html[data-dark="true"] .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: var(--gray);
+}
+
+html[data-dark="true"] .movie-card {
+    color: var(--text-color);
+}
+
+html[data-dark="true"] .movie-card:hover {
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(255, 255, 255, 0.2));
+    
+}
+
+html[data-dark="true"] .movie-card img {
+    box-shadow: 0 3px 13px 2px rgb(255 239 239 / 30%);
+}
+html[data-dark="false"] .movie-card img {
+    box-shadow: 0 3px 13px 2px rgba(0, 0, 0, 3);
+}
+
+html[data-dark="true"] .movie-card p {
+    color: var(--text-color);
+}
+html[data-dark="true"] .movie-card span {
+    color: var(--gray);
+}
+html[data-dark="false"] .movie-card span {
+    color: var(--gray);
+}
+
+
+
+
+
+
+
+/* Dark Mode Toggle */
+
+
+.toggle__container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 21px;
+    width: 38px;
+    transform: scale(1.5);
+    transition: background-color 0.3s;
+}
+
+.label .ball {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 1px;
+    height: 18px;
+    width: 18px;
+    transform: translateX(0px);
+    transition: transform 0.2slinear, background-color 0.3s;
+    text-align: center;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(19px);
+}
+
+/* .fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+} */
+ 
