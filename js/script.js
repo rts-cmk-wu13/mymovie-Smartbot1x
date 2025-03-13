@@ -1,5 +1,5 @@
 
-/* const API_KEY = "d12127704e6ac384c371c0b5b11426b4"; */
+
 import { API_KEY } from "./API.js"; 
 function PlayingMovies() {
     fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, {
