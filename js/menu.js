@@ -1,7 +1,23 @@
-let wrapperMenu = document.querySelector('.wrapper-menu');
+/* document.addEventListener('DOMContentLoaded', () => {
+  let wrapperMenu = document.querySelector('.wrapper-menu');
+  if (wrapperMenu) {
+      wrapperMenu.addEventListener('click', function() {
+          wrapperMenu.classList.toggle('open');  
+          console.log("clicked");
+      });
+  } else {
+      console.error("");
+  }
+}); */
 
-wrapperMenu.addEventListener('click', function(){
-  wrapperMenu.classList.toggle('open');  
-    console.log("clicked");
-     
-})  
+function BurgerMenu() {
+  let wrapperMenu = document.querySelector('.wrapper-menu');
+  if (wrapperMenu) {
+      wrapperMenu.addEventListener('click', function() {
+          wrapperMenu.classList.toggle('open');  
+          console.log("clicked");
+      });
+  } else {
+      console.error("not found");
+  }
+}

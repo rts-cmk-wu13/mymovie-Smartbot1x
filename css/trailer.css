@@ -1,6 +1,7 @@
-.ytmVideoInfoChannelLogo  {
-    display: none;
-}
-.ytmVideoInfoVideoTitle {
+.action-menu-engagement-buttons-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex
+;
     display: none;
 }

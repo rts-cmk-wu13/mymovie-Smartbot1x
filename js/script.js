@@ -1,11 +1,43 @@
+/* import { API_KEY } from "./API.js"; */
 
+/* function createHeader() {
+    const header = document.createElement("header");
+    header.innerHTML = `
+        <div class="wrapper-menu">
+            <div class="line-menu half start"></div>
+            <div class="line-menu"></div>
+            <div class="line-menu half end"></div>
+        </div>
+        <h1>MyMovie</h1>
+        <div class="toggle__container">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <div class="ball"></div>
+            </label>
+        </div>
+    `;
+    document.body.prepend(header);
+} */
 
-import { API_KEY } from "./API.js"; 
+function createMainContent() {
+    const main = document.createElement("main");
+    main.innerHTML = `
+        <div id="loading" style="display: none;">Loading...</div>
+        <section>
+            <div class="section-header">
+                <h2 id="">Now Showing</h2>
+                <button>see more</button>
+            </div>
+            <div id="horizontal-scroll" class="horizontal-scroll"></div>
+        </section>
+        <div id="movies-container"></div>
+    `;
+    document.body.appendChild(main);
+}
+
 function PlayingMovies() {
     fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, {
-        headers: {
-            accept: "application/json"
-        }
+        headers: { accept: "application/json" }
     })
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -28,6 +60,7 @@ function PopularMovies() {
             return response.json();
         })
         .then(data => {
+            console.log("Popular Movies Data:", data); 
             displayVerticalMovies(data.results);
         })
         .catch(error => {
@@ -60,11 +93,16 @@ function displayHorizontalMovies(movies) {
 }
 
 function displayVerticalMovies(movies) {
-    const container = document.getElementById("vertical-scroll");
+    let container = document.getElementById("vertical-scroll");
+
+    // Container for v-scroll
     if (!container) {
-        console.error("Vertical scroll container not found!");
-        return;
+        container = document.createElement("div");
+        container.id = "vertical-scroll";
+        document.getElementById("movies-container").appendChild(container);
     }
+
+    console.log("Movies to display:", movies); 
     container.innerHTML = movies
         .map(
             (movie) => `
@@ -83,7 +121,13 @@ function displayVerticalMovies(movies) {
         .join("");
 }
 
+
+
 window.onload = () => {
-   PlayingMovies();
+   /*  createHeader(); */
+    createMainContent();
+    PlayingMovies();
     PopularMovies();
+    BurgerMenu(); 
+    
 };
